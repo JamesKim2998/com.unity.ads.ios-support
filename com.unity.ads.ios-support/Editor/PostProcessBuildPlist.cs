@@ -34,11 +34,12 @@ namespace Unity.Advertisement.IosSupport.Editor
             var ids = new HashSet<string>();
             try
             {
-                SkAdNetworkParser.GetAllParsers().ToList().ForEach(parser => {
-                    provider.GetSources(k_SkAdNetworksFileName, parser.GetExtension()).ToList().ForEach(source => {
-                        ids.UnionWith(parser.ParseSource(source));
-                    });
-                });
+                ids.UnionWith(new SkAdNetworkXmlParser().ParseSource(new SkAdNetworkLocalSource(k_SkAdNetworksFileName)));
+                // SkAdNetworkParser.GetAllParsers().ToList().ForEach(parser => {
+                //     provider.GetSources(k_SkAdNetworksFileName, parser.GetExtension()).ToList().ForEach(source => {
+                //         ids.UnionWith(parser.ParseSource(source));
+                //     });
+                // });
             }
             catch (Exception e)
             {
