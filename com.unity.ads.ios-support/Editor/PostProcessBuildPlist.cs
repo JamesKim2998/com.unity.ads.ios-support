@@ -34,7 +34,7 @@ namespace Unity.Advertisement.IosSupport.Editor
             var ids = new HashSet<string>();
             try
             {
-                ids.UnionWith(new SkAdNetworkXmlParser().ParseSource(new SkAdNetworkLocalSource(k_SkAdNetworksFileName)));
+                ids.UnionWith(new SkAdNetworkXmlParser().ParseSource(new SkAdNetworkLocalSource(k_SkAdNetworksFileName + ".xml")));
                 // SkAdNetworkParser.GetAllParsers().ToList().ForEach(parser => {
                 //     provider.GetSources(k_SkAdNetworksFileName, parser.GetExtension()).ToList().ForEach(source => {
                 //         ids.UnionWith(parser.ParseSource(source));
