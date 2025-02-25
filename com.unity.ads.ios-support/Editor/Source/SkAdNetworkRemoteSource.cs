@@ -1,6 +1,5 @@
 using System.IO;
 using System.Net;
-using UnityEngine;
 
 namespace Unity.Advertisement.IosSupport.Editor
 {

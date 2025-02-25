@@ -6,7 +6,6 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.iOS.Xcode;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEditor.Build.Reporting;
 
 namespace Unity.Advertisement.IosSupport.Editor
